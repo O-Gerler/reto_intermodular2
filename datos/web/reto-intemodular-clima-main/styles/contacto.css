@@ -1,0 +1,30 @@
+#contacto div {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+#contacto div .form-control {
+  border-radius: 0;
+  border: none;
+  border-bottom: 3px solid #42a5f5;
+}
+
+#contacto div input:focus {
+  outline: 0;
+}
+
+#contacto input[type=submit] {
+  margin: 0 auto;
+  background-color: #42a5f5;
+  border-radius: 0;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#contacto input[type=submit]:hover {
+  background-color: #024bd1;
+  color: white;
+}

@@ -1,0 +1,11 @@
+#sobreNosotros {
+  padding-top: 50px;
+}
+
+#sobreNosotros p {
+  max-width: 80ch;
+}
+
+#sobreNosotros img {
+  width: 200px;
+}

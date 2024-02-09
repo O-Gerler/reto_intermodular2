@@ -1,0 +1,43 @@
+.cartaPrecio {
+  border: 10px solid white;
+  background-color: #f3f3f3;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cartaPrecio .header {
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+.cartaPrecio h3 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.cartaPrecio p {
+  width: 100%;
+  font-weight: normal;
+}
+
+.cartaPrecio p span {
+  font-size: 3rem;
+  font-family: 'Assistant', sans-serif;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.cartaPrecio button {
+  width: 100%;
+  background-color: #42a5f5;
+  border-radius: 0;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.cartaPrecio button:hover {
+  background-color: #024bd1;
+  color: white;
+}

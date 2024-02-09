@@ -1,0 +1,69 @@
+#login {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 70vh;
+  border-radius: 10px;
+  /* Smooth Shadow */
+  box-shadow:
+  2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+  12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+  100px 100px 80px rgba(0, 0, 0, 0.07);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+#fondo-login {
+  background: rgb(66,165,245);
+  background: linear-gradient(180deg, rgba(66,165,245,1) 0%, rgba(2,136,209,1) 35%, rgba(2,75,209,1) 100%); 
+  z-index: 20000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: 50%; */
+  height: 100%;
+  transition: all .5s ease-in-out;
+}
+
+#login #fondo-login>div {
+  background-color: white;
+}
+
+#login i {
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#login #btn-iniciar-sesion {
+  width: 100%;
+  background-color: #42a5f5;
+  border-radius: 0;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.mover-login {
+  left: 50% !important;
+}
+
+@media (max-width: 992px) {
+  #login {
+    height: 80vh;
+  }
+
+  #fondo-login {
+    left: -100%;
+    transition: all 1s ease-in-out;
+  }
+
+  .mover-login {
+    left: 100% !important;
+  }
+}

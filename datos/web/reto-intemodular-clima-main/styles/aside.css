@@ -1,0 +1,14 @@
+#paginaConLog>aside {
+  /* height: %; */
+  background: rgb(66,165,245);
+  background: linear-gradient(135deg, rgba(66,165,245,1) 0%, rgba(2,136,209,1) 35%, rgba(2,75,209,1) 100%); 
+  padding: 20px 0;
+}
+
+#paginaConLog>aside li {
+  text-transform: none;
+}
+
+.activo {
+  background-color: #215AACB0;
+}

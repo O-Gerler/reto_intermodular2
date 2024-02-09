@@ -1,0 +1,14 @@
+#modalSeleccionMedidas #seleccionadas {
+  background-color: #cccccc67;
+}
+
+#modalSeleccionMedidas #flecha {
+  transform: scale(3) translateY(0);
+  animation: moverFlecha ease-in-out infinite 1.5s;
+}
+
+@keyframes moverFlecha {
+  0% { transform: scale(3) translateY(-2.5px); }
+  50% { transform: scale(3) translateY(2.5px); }
+  100% { transform: scale(3) translateY(-2.5px); }
+}

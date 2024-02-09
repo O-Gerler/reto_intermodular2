@@ -1,0 +1,16 @@
+footer {
+  background-color: #333;
+}
+
+footer section {
+  background-color: #333;
+}
+
+footer section div ul li:first-child {
+  font-size: 1.1rem;
+  cursor: auto;
+}
+
+footer section div ul :not(li:first-child) {
+  font-size: .6rem;
+}
