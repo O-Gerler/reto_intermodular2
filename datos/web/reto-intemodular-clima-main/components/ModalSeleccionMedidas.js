@@ -15,13 +15,14 @@ const ModalSeleccionMedidas = (ciudad) => {
           class="pb-1"
           style="color: #215AAC"
         >
-          
           <p
             id="zonaDrag"
             class="d-flex justify-content-center gap-5 align-items-center" 
             style="font-size: 2.5rem; height: 60px"
             ondrop="dejarIconoBase(event, this)"
             ondragover="permitirDrop(event)"
+            ontouchmove="permitirDrop(event)"
+            ontouchend="dejarIconoBase(event, this)"
           >
             <span 
               id="iconoMaxima" 
@@ -70,6 +71,8 @@ const ModalSeleccionMedidas = (ciudad) => {
           ondragover="cambiarColorDragOver(event)"
           ondragleave="salirDrop(event)"
           ondrop="dejarIconoZonaDrop(event, this)"
+          ontouchmove="permitirDrop(event)"
+          ontouchend="dejarIconoZonaDrop(event, this)"
         > 
 
           <p
@@ -82,6 +85,7 @@ const ModalSeleccionMedidas = (ciudad) => {
           <div 
             id="zonaDrop"
             ondragover="cambiarColorDragOver(event)"
+            ontouchmove="permitirDrop(event)"
             class="d-flex justify-content-center gap-5 align-items-center"
             style="font-size: 2.5rem;"
           ></div>
