@@ -159,5 +159,6 @@ const cerrarSesion = () => {
       borrarPaginaConLogin()
       cargarPaginaSinLogin()
       access_token = ''
+      graficos = []
     })
 }

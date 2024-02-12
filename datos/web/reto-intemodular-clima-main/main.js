@@ -8,7 +8,7 @@ let modalSeleccionMedidasHTML = ''
 let access_token
 let intervaloBalizas
 let localizaciones
-const graficos = []
+let graficos = []
 
 let urlActual = (new URL(window.location.origin)).hostname;
 
