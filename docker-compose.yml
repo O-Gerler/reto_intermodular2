@@ -40,7 +40,6 @@ services:
       - DB_USERNAME=root
       - DB_PASSWORD=12345678
       - DB_DATABASE=EuskoClima
-    command: php artisan passport:install
     volumes:
       - './datos/euskoclima-api:/app'
 
