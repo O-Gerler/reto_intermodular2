@@ -31,9 +31,6 @@ const iniciarSesion = e => {
       if(data.access_token) {
         access_token = data.access_token
         obtenerLocalizaciones()
-        borrarLoginRegister()
-        borrarPaginaSinLogin()
-        cargarPaginaConLogin()
       }
     })
 }

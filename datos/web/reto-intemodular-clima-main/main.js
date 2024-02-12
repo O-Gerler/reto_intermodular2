@@ -47,9 +47,12 @@ function limpiarPaginaConLog() {
 
 function borrarPaginaConLogin() {
   paginaConLog.innerHTML = ''
+  paginaConLog.style.height = '0'
 }
 
 function cargarPaginaConLogin() {
+
+  paginaConLog.style.height = '100vh'
 
   paginaConLog.innerHTML = Aside() + 
   `
