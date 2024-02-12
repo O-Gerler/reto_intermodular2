@@ -74,9 +74,9 @@ async function traerForecastEuskalmet(ciudad) {
   const fechaHoyMes = fechaHoy.getMonth() + 1 < 10 
     ? `0${(fechaHoy.getMonth() + 1)}`
     : fechaHoy.getMonth() + 1
-  const fechaHoyDia = fechaHoy.getDay() + 1 < 10 
-    ? `0${(fechaHoy.getDay())}`
-    : fechaHoy.getDay()
+  const fechaHoyDia = fechaHoy.getDate() < 10 
+    ? `0${(fechaHoy.getDate())}`
+    : fechaHoy.getDate()
   const fechaHoyTodoJunto = `${fechaHoyAnio}${fechaHoyMes}${fechaHoyDia}`
 
   const apiUrl = `https://api.euskadi.eus/euskalmet/weather/regions/basque_country/zones/${ciudad.cod_zona}/locations/${ciudad.nombre}/forecast/at/${fechaHoyAnio}/${fechaHoyMes}/${fechaHoyDia}/for/${fechaHoyTodoJunto}`

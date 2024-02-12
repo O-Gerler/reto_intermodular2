@@ -22,9 +22,9 @@ services:
     ports:
       - '8085:8000'
     environment:
-      - DB_HOST=10.10.17.110
+      - DB_HOST=172.17.0.1
       - DB_PORT=3306
-      - DB_USERNAME=Oier
+      - DB_USERNAME=root
       - DB_PASSWORD=12345678
       - DB_DATABASE=EuskoClima
     volumes:
@@ -35,11 +35,12 @@ services:
     ports:
       - '8086:8000'
     environment:
-      - DB_HOST=10.10.17.110
+      - DB_HOST=172.17.0.1
       - DB_PORT=3306
-      - DB_USERNAME=Oier
+      - DB_USERNAME=root
       - DB_PASSWORD=12345678
       - DB_DATABASE=EuskoClima
+    command: php artisan migrate && php artisan passport:install
     volumes:
       - './datos/euskoclima-api:/app'
 
@@ -57,3 +58,12 @@ services:
       - '3306'
     volumes:
       - './my-db:/var/lib/mysql'
+  
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - '8087:80'
+    environment:
+      - PMA_HOST=mysql
+      - PMA_PORT=3306
+      - MYSQL_ROOT_PASSWORD=12345678

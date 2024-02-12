@@ -42,6 +42,7 @@ const registrarse = e => {
   e.preventDefault()
   
   const apiUrl = `http://${urlActual}:8086/api/register`
+  console.log(apiUrl)
 
   const name = document.getElementById('registroName').value
   const email = document.getElementById('registroEmail').value
@@ -62,9 +63,6 @@ const registrarse = e => {
       if(data.access_token) {
         access_token = data.access_token
         obtenerLocalizaciones()
-        borrarLoginRegister()
-        borrarPaginaSinLogin()
-        cargarPaginaConLogin()
       }
     })
 }
@@ -81,7 +79,12 @@ const obtenerLocalizaciones = () => {
 
   fetch(apiUrl, options)
     .then(res => res.json())
-    .then(data => localizaciones = data.localizaciones)
+    .then(data => {
+      localizaciones = data.localizaciones
+      borrarLoginRegister()
+      borrarPaginaSinLogin()
+      cargarPaginaConLogin()
+    })
 }
 
 const Login = () => {
@@ -92,10 +95,10 @@ const Login = () => {
       <section id="login" class="p-absolute container">
         <main style="height: 100%; position: relative;" class="row">
           <div id="fondo-login" class="col-12 col-lg-6"></div>
-          <p style="position: absolute; z-index: 10000">
+          <p style="position: absolute; z-index: 21000">
             <i 
               onclick="borrarLoginRegister()" 
-              style="color: black" 
+              style="color: black;" 
               class="fa-solid fa-x m-2 mt-4"
             ></i>
           </p>
@@ -124,7 +127,7 @@ const Login = () => {
               </div>
               <div class="mt-3 col-12 col-md-8">
                 <input
-                  id="btn-iniciar-sesion"
+                  id="btn-registrarse"
                   class="btn"
                   type="submit"
                   value="Registrarse"

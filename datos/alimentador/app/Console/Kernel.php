@@ -14,7 +14,10 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        // $schedule->command('inspire')->hourly();
+        // $schedule->command('fetch:zonas-euskalmet');
+        // $schedule->command('fetch:provincias-eltiempo');
+        // $schedule->command('fetch:localizaciones-euskalmet');
+        // $schedule->command('fetch:localizaciones-eltiempo');
         // $schedule->call(["App\Http\Controllers\ControladorDatosApi@extraerDatos"])->everyFifteenSeconds();
         // $schedule->command('fetch:mediciones-eltiempo')->everyFifteenMinutes();
         // $lastExecutionTime = Cache::get('last_15_minutes_command_execution', now()->subMinutes(2));

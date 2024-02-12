@@ -51,7 +51,7 @@ class DatabaseSeeder extends Seeder
         }
 
         $startDate = Carbon::create(2024, 1, 1, 0, 0, 0);
-        $endDate = Carbon::create(2024, 2, 5, 11, 00, 0);
+        $endDate = Carbon::now();
 
         $currentDate = clone $startDate;
 

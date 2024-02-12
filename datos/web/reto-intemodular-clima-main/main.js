@@ -63,17 +63,11 @@ function cargarPaginaConLogin() {
     </section>
   `
 
-  // Luego hay que hacer esto fijandose en el localStorage si existe algun registro mostrar directamente las balizas si no el mapa
   if (ciudadesSeleccionadas.length > 0) navegarBalizas()
   else navegarMapa()
-  // navegarGraficos()
 }
 
-// cargarPaginaConLogin()
 
-// Esta funciona ira cuando el login sea valido, por ahora se queda aqui para pobrar cuando se terminen las pruebas quitar de aqui
 
-// Mapa()
 
-// Drag and Drop
 

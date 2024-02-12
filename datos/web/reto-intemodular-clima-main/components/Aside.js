@@ -101,7 +101,7 @@ const navegarBalizas = async () => {
   btnBalizas.forEach( btn => btn.classList.add('activo'))
   document.getElementById('balizas').innerHTML = await Balizas()
   lucide.createIcons()
-  $(document).tooltip();
+  // $(document).tooltip(); No consigo que funcione porque jquery necesita tener el objeto creado desde un inicio y como se van creando dinamicamente da error
   intervaloBalizas = setInterval(async () => {
     document.getElementById('balizas').innerHTML = await Balizas()
     lucide.createIcons()
